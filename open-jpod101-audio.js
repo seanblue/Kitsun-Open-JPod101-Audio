@@ -3,7 +3,7 @@
 // @namespace     https://kitsun.io
 // @description   Open JPod101 audio for the word being edited in a new tab.
 // @author        seanblue
-// @version       1.0.0
+// @version       1.0.1
 // @include       https://kitsun.io/*
 // @grant         none
 // ==/UserScript==
@@ -30,7 +30,7 @@
         let kanji = getInputValue(labelNodes, kanjiLabelText);
         let kana = getInputValue(labelNodes, kanaLabelText);
 
-        if (kanji && kana) {
+        if (kana) {
             let url = getJPodUrl(kanji, kana);
 
             window.open(url);
