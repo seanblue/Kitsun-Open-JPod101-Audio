@@ -3,7 +3,7 @@
 // @namespace     https://kitsun.io
 // @description   Open JPod101 audio for the word being edited in a new tab.
 // @author        seanblue
-// @version       1.0.1
+// @version       1.0.2
 // @include       https://kitsun.io/*
 // @grant         none
 // ==/UserScript==
@@ -43,8 +43,8 @@
 
             if (label.innerText === labelText) {
                 let input = label.nextElementSibling;
-                if (input) {
-                    return input.value;
+                if (input && input.value) {
+                    return input.value.split(',')[0].trim();
                 }
             }
         }
